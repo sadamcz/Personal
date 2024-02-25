@@ -14,7 +14,7 @@ def random_new_frame():
     i = random.randint(0, len(randomwordlist) - 1)
     search_query = randomwordlist[i] + " in ASL"
 
-    rchosen = tk.Label(root, text=search_query, font=("Arial", 36))
+    rchosen = tk.Label(root, text=search_query, font=("Arial", 36), bg="#ffd0d7")
     rchosen.place(x=470, y=150, height=100, width=1000)
 
     googlesearch = []
@@ -52,8 +52,6 @@ def search_new_frame():
     exitbutt.place(x=200, y=50, height= 50, width=60)
     
 
-    
-
 def getinput(myentry):
     search_query = myentry.get() + " in ASL"
     
@@ -79,7 +77,7 @@ def backfunction():
     for widget in root.winfo_children():
         widget.destroy()
 
-    start_label = tk.Label(root, text="ASL PRACTICE APPLICATION", font=("Arial", 48))
+    start_label = tk.Label(root, text="ASL PRACTICE APPLICATION", font=("Arial", 48), bg="#ffd0d7")
     start_label.pack()
     start_label.place(x=470, y=150, height=100, width=1000)
 
@@ -92,13 +90,11 @@ def backfunction():
     exitbutt.place(x=200, y=50, height= 50, width=60)
 
 
-
-
 root = tk.Tk()
 root.title("ASL PRACTICE")
 root.geometry("1920x1080")
 
-start_label = tk.Label(root, text="ASL PRACTICE APPLICATION", font=("Arial", 48))
+start_label = tk.Label(root, text="ASL PRACTICE APPLICATION", font=("Arial", 48),bg="#ffd0d7")
 start_label.pack()
 start_label.place(x=470, y=150, height=100, width=1000)
 
@@ -110,6 +106,5 @@ searchword = tk.Button(root, text="SEARCH WORD", font=("Arial", 18), command=sea
 randomword.place(x=800, y=350, height=200, width=300)
 searchword.place(x=800, y=600, height=200, width=300)
 
-
-root["bg"] = "#F1EB9C"
+root["bg"] = "#f5e9dc"
 root.mainloop()
